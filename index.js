@@ -17,7 +17,7 @@ server.listen(port, function () {
 });
 
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 console.log("listen");
 
