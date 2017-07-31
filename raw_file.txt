@@ -1,0 +1,100 @@
+
+$(function(){
+
+var socket = io.connect('http://localhost:3000');
+
+var sender = $("#sender");
+var message = $("#message");
+var output = $("#output");
+var feed = $("#feed");
+var out="";
+
+//alert("Hese");
+
+$(document).on('click','#send',function(){
+
+	socket.emit('chat',{
+		    sender:sender.val(),
+		    message:message.val()
+		});
+
+	});
+
+socket.on('chat',function(data){
+
+		//alert(data.sender);
+		 //= '<p> <strong>' + data.sender + ':' + '</strong>' + data.message + '</p>';
+
+		 feed.html('');
+	output.html(out  +='<p> <strong>' + data.sender + ':' + '</strong>' + data.message + '</p>'); 	
+
+});
+
+
+$(document).on('keypress','#message',function(){
+
+socket.emit('typing',sender.val());
+
+
+});
+
+socket.on('typing',function(data){
+
+	feed.html('<p> <em>' + data + ' is typing message' + '</em></p>');
+
+});
+
+
+
+
+});
+
+
+
+var express = require('express');
+var app = express();
+
+var socket = require('socket.io');
+var server = app.listen(3000,function(){
+
+console.log("It is connected on port 30000");
+
+});
+
+//users = {};
+users = [];
+
+//App Set up
+
+app.use(express.static('public'));
+
+var io = socket(server);
+
+io.on('connection',function(socket){
+
+    console.log("Hello World Connected" + socket.id);
+
+socket.on('chat',function(data){
+
+    //console.log(data.sender + ' ' + socket.data);
+
+    socket.sender = data;
+    users.push(socket.sender);
+    //users[socket.sender] = socket;
+    console.log(socket.sender);
+
+    io.sockets.emit('chat',data);
+
+
+});
+
+socket.on('typing',function(data){
+
+	//console.log(data);
+	socket.broadcast.emit('typing',data);
+});
+
+
+
+});
+

@@ -1,0 +1,138 @@
+//var data_t = $.parserJSON(data);
+		//var data_tr = JSON.parser(data);
+		//var data_tr = JSON.strigify(data);
+		
+		//alert(data);
+
+		//alert("hh");
+		//alert(data.length);
+		for (var i = 0; i < data.length; i++) {
+		
+			
+		
+		/*var convs = $(data[i].id).filter(function(n,ie){
+
+			//alert(data[i].conv_usr +data[i].msg);
+			return (data[i].conv_usr === vis || data[i].conv_usr === ver);
+
+			///out_put.html(n);
+
+		});*/
+			
+			var convs = $.grep(data[i],function(element,index){
+
+					//return element.msg == vis || element.msg == ver; 
+					return element.msg == ver; 
+
+					if(element.msg==ver){
+
+							return alert("Yess");
+					}
+
+			});
+
+	}
+
+			/*for(vis in convs){
+				out_put.html(data[i].msg);	
+			}*/
+			/*$.each(convs, function(i){
+				//out_put.html("hellos");
+				//$('#output').html("Hello");
+				alert(convs);
+				//document.getElementById("output").innerHTML = convs;
+				
+			});*/
+
+			$.each(convs, function(i,val){
+				//out_put.html("hellos");
+				//$('#output').html("Hello");
+				alert(val);
+				//document.getElementById("output").innerHTML = convs;
+				
+			});
+
+
+		
+			
+			//alert("Hello");
+
+
+
+	//console.log(users);
+	
+	//messages.chats['' + snd + rs + ''] = ['Sodiq','Wale','Raflex'];
+	//messages['converse'] = "message";
+	//messages
+	//messages.conversation = 'chat:{}';
+	//messages.conversation ='' + snd + rs +'';
+	//messages.conversation['' + snd + rs + ''];
+	//messages.chat = ['Sodiq','Wale','Raflex'];
+	//messages.chat = ['Sodiq','Wale','Raflex'];
+	//messages.sodiq = ['Sodiq','Wale','Raflex'];
+	//messages.chat.messages = "Read Conversation";
+	//send.read3 = ['Sodiq','Wale','Raflex'];
+	//messages.read3.mess = "Conversatin";
+	//person.class = "pry5";
+	//	if(snd in messages.chats){
+		//	console.log("user already exist");
+//		}else{
+
+		//socket.sender = data.sender;		
+		//users[socket.sender] = socket;
+//		 data.sender
+		//var put = {"Hello" : "sodiq"};
+		
+		 //users['name'] = "sodiq";
+		 //users.name = "sodiq";
+		//users[data.sender] = "Adedeji";
+
+		//messages.chats[snd] = "Adedeji";
+
+		//var x = JSON.parse(person);	
+		 //users.push(chat['001']);
+		//lenght of message = Object.keys(messages.chats).length
+		// console.log(users);
+		 //console.log(chat_msg.conversation.id[1]);
+		 //chat_msg.conversation.push({"id": "5", "name":"SnatchB", "type":"GreenB"});
+
+		 /*foreach(id in chats.conversation){
+		 	console.log()
+		 }*/
+		 //var loopjs = JSON.stringify(chat_msg);
+
+		 //length = Object.keys(chat_msg.conversation).length;
+
+		 /*var loopjs = JSON.stringify(chat_msg).filter(function(entry){
+
+		 	return entry.name == 'SnatchB';
+		 });*/
+
+		 console.log(length);
+		//users.chat['003'] = "sodiq";
+		//messages['001'][1] = "raflex";
+
+		//}
+
+		/*
+		var filter_js = find_in_object(loopjs,{name:"SnatchB"});
+
+		console.log(filter_js);
+
+		function find_in_object(my_object,my_criteria){
+
+			return my_object.filter(function(obj){
+				return Object.keys(my_criteria).every(function(c){
+					return obj[c] == my_criteria[c];
+				});
+
+			});
+
+		}*/
+
+
+
+
+
+	//	messages.chats.snd = "Adedeji";
+	//	 console.log(messages.chat.snd);

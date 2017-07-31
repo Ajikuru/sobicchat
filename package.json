@@ -1,0 +1,31 @@
+{
+  "name": "chat_app",
+  "version": "0.0.1",
+  "description": "Chating App for Sobic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajikuru/Chat_App.git"
+  },
+  "author": "SIDEEQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ajikuru/Chat_App/issues"
+  },
+  "homepage": "https://github.com/Ajikuru/Chat_App#readme",
+  "dependencies": {
+    "circular-json": "^0.3.3",
+    "express": "^4.15.3",
+    "json-query": "^2.2.2",
+    "json-stringify-safe": "^5.0.1",
+    "smart-circular": "^1.0.2",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodeman": "^1.1.2",
+    "nodemon": "^1.11.0"
+  }
+}
