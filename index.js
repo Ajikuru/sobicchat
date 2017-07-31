@@ -131,7 +131,7 @@ socket.on('user_login',function(data,callback){
 		var id_sock = users_chk_aft[id_usr].sockeid;
 		
 		console.log(socket.id);
-		//console.log(id_sock);
+		console.log(id_sock);
 		io.sockets.connected[id_sock].emit('user_list',{keys:Object.keys(users_chk_aft),val:Object.values(users_chk_aft)});	
 		//io.sockets.emit('user_list',{keys:Object.keys(users_chk_aft),val:Object.values(users_chk_aft)});	
 
