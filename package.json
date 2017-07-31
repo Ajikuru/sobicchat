@@ -13,9 +13,9 @@
   "author": "SIDEEQ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ajikuru/Chat_App/issues"
+    "url": "https://github.com/Ajikuru/sobicchat/issues"
   },
-  "homepage": "https://github.com/Ajikuru/Chat_App#readme",
+  "homepage": "https://github.com/Ajikuru/sobicchat/#readme",
   "dependencies": {
     "circular-json": "^0.3.3",
     "express": "^4.15.3",
